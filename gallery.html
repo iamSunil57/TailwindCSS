@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <!-- FONT LINK: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <!-- ICONS LINK: -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <header
+      class="lg:px-16 px-4 bg-gray-100 flex flex-wrap items-center py-4 shadow-md dark:bg-gray-300 dark:text-white"
+    >
+      <div class="flex-1 flex justify-between items-center">
+        <a href="/index.html" class="text-xl font-semibold">Food Zone</a>
+      </div>
+
+      <label for="menu-toggle" class="pointer-cursor md:hidden block">
+        <svg
+          class="fill-current text-gray-900 dark:text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+        >
+          <title>menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </label>
+      <input class="hidden" type="checkbox" id="menu-toggle" />
+
+      <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+        <nav>
+          <ul
+            class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0"
+          >
+            <li>
+              <a
+                class="md:p-4 py-3 px-0 block dark:text-white"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-3 px-0 block dark:text-white"
+                href="gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-3 px-0 block dark:text-white"
+                href="blogs.html"
+                >Blogs</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-3 px-0 block md:mb-0 mb-2 dark:text-white"
+                href="contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="w-5 h-5 mr-5 ml-5">
+        <div
+          id="light"
+          class="cursor-pointer place-self-center dark:text-white"
+          title="Normal Mode"
+          onclick="changeTheme('light')"
+        >
+          <ion-icon name="sunny-outline"> </ion-icon>
+        </div>
+        <div
+          id="dark"
+          class="hidden cursor-pointer place-self-center"
+          title="Dark Mode"
+          onclick="changeTheme('dark')"
+        >
+          <ion-icon name="moon-outline"> </ion-icon>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 dark:bg-gray-900">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image1.jpg"
+          alt="image"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image2.jpg"
+          alt="image"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image3.jpg"
+          alt="image"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image4.jpg"
+          alt="image"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image5.jpg"
+          alt="image"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image6.jpg"
+          alt="image"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image7.jpg"
+          alt="image"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image8.jpg"
+          alt="image"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image9.jpg"
+          alt="image"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image10.jpg"
+          alt="image"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image11.jpg"
+          alt="image"
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="./src/gallery//image12.jpg"
+          alt="image"
+        />
+      </div>
+    </div>
+
+    <script>
+      const lightIcon = document.getElementById("light");
+      const darkIcon = document.getElementById("dark");
+      changeTheme(localStorage.theme);
+      function changeTheme(theme) {
+        if (theme === "light") {
+          document.documentElement.classList.remove("dark");
+          lightIcon.classList.add("hidden");
+          darkIcon.classList.remove("hidden");
+        } else if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+          lightIcon.classList.remove("hidden");
+          darkIcon.classList.add("hidden");
+        }
+        localStorage.setItem("theme", theme);
+      }
+    </script>
+  </body>
+</html>

@@ -29,116 +29,195 @@
   </head>
   <body>
     <header
-      class="sticky top-0 z-20 bg-purple-100 text-purple-800 w-full h-12 md:h-auto dark:bg-slate-800 shadow-md dark:shadow-zinc-700"
+      class="lg:px-16 px-4 bg-gray-100 flex flex-wrap items-center py-4 shadow-md dark:bg-gray-300 dark:text-white"
     >
-      <div
-        class="flex flex-row justify-between md:items-end p-x-5 md:px-100 py-2"
-      >
-        <div class="md:hidden">
-          <ion-icon name="menu-outline"> </ion-icon>
-        </div>
-        <div class="relative">
-          <a href="index.html">
-            <div
-              class="absolute ml-5 top-0 z-10 h-16 md:h-24 md:w-24 rounded-full outline-4 outline-dotted outline-purple-700 animate-rotating duration-500 ease-out hover:animate-none cursor-pointer dark:outline-white"
-            ></div>
-            <img
-              src=" ./src/images/logo.png"
-              class="h-16 w-24 md:h-24 md:w-24 z-20 ml-5"
-              alt="logo"
-            />
-          </a>
-        </div>
+      <div class="flex-1 flex justify-between items-center">
+        <a href="#" class="text-xl font-semibold">Food Zone</a>
+      </div>
 
-        <div class="flex items-start md:items-center">
-          <div
-            class="hidden font-semibold md:grid grid-cols-6 gap-x-10 grow items-stretch place-content-center justify-items-center px-5 max-w-7xl dark:text-white"
+      <label for="menu-toggle" class="pointer-cursor md:hidden block">
+        <svg
+          class="fill-current text-gray-900 dark:text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+        >
+          <title>menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </label>
+      <input class="hidden" type="checkbox" id="menu-toggle" />
+
+      <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+        <nav>
+          <ul
+            class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0"
           >
-            <a href="index.html">
-              <div class="border-b-4 border-purple-400">Home</div>
-            </a>
-            <a href="menu.html">
-              <div>Menu</div>
-            </a>
-            <a href="gallery.html">
-              <div>Gallery</div>
-            </a>
-            <a href="blogs.html">
-              <div>Blogs</div>
-            </a>
-            <a href="faqs.html">
-              <div>FAQ</div>
-            </a>
-            <a href="contact.html">
-              <div>Contact</div>
-            </a>
-          </div>
+            <li>
+              <a
+                class="md:p-4 py-3 px-0 block dark:text-white"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-3 px-0 block dark:text-white"
+                href="gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-3 px-0 block dark:text-white"
+                href="blogs.html"
+                >Blogs</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-3 px-0 block md:mb-0 mb-2 dark:text-white"
+                href="contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-          <div class="w-5 h-5 mr-5">
-            <div
-              id="light"
-              class="cursor-pointer place-self-center dark:text-white"
-              title="Normal Mode"
-              onclick="changeTheme('light')"
-            >
-              <ion-icon name="sunny-outline"> </ion-icon>
-            </div>
-            <div
-              id="dark"
-              class="hidden cursor-pointer place-self-center"
-              title="Dark Mode"
-              onclick="changeTheme('dark')"
-            >
-              <ion-icon name="moon-outline"> </ion-icon>
-            </div>
-          </div>
+      <div class="w-5 h-5 mr-5 ml-5">
+        <div
+          id="light"
+          class="cursor-pointer place-self-center dark:text-white"
+          title="Normal Mode"
+          onclick="changeTheme('light')"
+        >
+          <ion-icon name="sunny-outline"> </ion-icon>
+        </div>
+        <div
+          id="dark"
+          class="hidden cursor-pointer place-self-center"
+          title="Dark Mode"
+          onclick="changeTheme('dark')"
+        >
+          <ion-icon name="moon-outline"> </ion-icon>
         </div>
       </div>
     </header>
 
-    <h1 class="font-ubuntu">Hello World!</h1>
-    <main>
-      <div
-        class="relative p-3 md:p-10 min-h-screen max-w-screen dark:contrast-125"
-      >
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 grid-rows-2 items-stretch place-content-center min-h-screen text-3xl"
-        >
-          <div
-            class="border md:border-y-4 border-sky-400 dark:border-stone-300"
-          >
-            <div>
-              Nepali
-              <img src="./src/images/sf.png" alt="image" />
+    <!-- Hero section -->
+    <section class="bg-blue-600 py-20 dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <h1 class="text-white font-bold text-5xl leading-tight mb-6">
+              Discover the world's best coffee
+            </h1>
+            <p class="text-white text-xl mb-8">
+              From hand-picked farms to your cup, we source the finest beans and
+              roast them to perfection.
+            </p>
+            <a
+              href="#"
+              class="px-6 py-3 bg-white text-blue-600 font-bold rounded-full hover:bg-blue-700 transition duration-200"
+              >Shop now</a
+            >
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="./src/images/nf.jpg"
+              alt="Coffee beans"
+              class="w-full rounded-lg shadow-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured section -->
+    <section class="py-20 dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 dark:text-white">
+          Featured products
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="./src/images/nf.jpg"
+              alt="Coffee"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Single Origin Blend
+              </h3>
+              <p class="text-gray-700 text-base">
+                Our most popular blend, featuring beans from a single farm in
+                Ethiopia. Notes of chocolate, berries, and citrus.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-gray-700 font-medium">$14.99</span>
+                <button
+                  class="px-4 py-2 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition duration-200"
+                >
+                  Add to cart
+                </button>
+              </div>
             </div>
           </div>
-          <div
-            class="border md:border-y-4 border-sky-400 dark:border-stone-300"
-          >
-            <div>
-              South Indian
-              <img src="./src/images/nf.jpg" alt="image" />
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="./src/images/juices.jpg"
+              alt="Coffee"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Dark Roast Blend
+              </h3>
+              <p class="text-gray-700 text-base">
+                A bold and flavorful blend of beans from Brazil, Colombia, and
+                Indonesia. Notes of caramel, nuts, and tobacco.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-gray-700 font-medium">$12.99</span>
+                <button
+                  class="px-4 py-2 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition duration-200"
+                >
+                  Add to cart
+                </button>
+              </div>
             </div>
           </div>
-          <div
-            class="border md:border-y-4 border-sky-400 dark:border-stone-300"
-          >
-            <div>
-              Chinese
-              <img src="./src/images/juices.png" alt="image" />
-            </div>
-          </div>
-          <div
-            class="border md:border-y-4 border-sky-400 dark:border-stone-300"
-          >
-            <div>
-              Thai
-              <img src="./src/images/vf.png" alt="image" />
+
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="./src/images/image.jpg"
+              alt="Coffee"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Dark Roast Blend
+              </h3>
+              <p class="text-gray-700 text-base">
+                A bold and flavorful blend of beans from Brazil, Colombia, and
+                Indonesia. Notes of caramel, nuts, and tobacco.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-gray-700 font-medium">$12.99</span>
+                <button
+                  class="px-4 py-2 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition duration-200"
+                >
+                  Add to cart
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </section>
 
     <script>
       const lightIcon = document.getElementById("light");
